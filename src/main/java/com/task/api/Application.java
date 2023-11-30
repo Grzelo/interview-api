@@ -1,13 +1,13 @@
-package com.task.interviewapi;
+package com.task.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InterviewApiApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(InterviewApiApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
