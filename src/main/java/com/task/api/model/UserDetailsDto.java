@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 @Getter
 @Setter
@@ -20,11 +19,4 @@ public class UserDetailsDto {
     String avatarUrl;
     String createdAt;
     BigDecimal calculations;
-
-    public void setCalculations(Long followersCnt, Long publicReposCnt) {
-        if (followersCnt == 0) this.calculations = BigDecimal.valueOf(-1);
-        else this.calculations = BigDecimal.valueOf(6)
-                .divide(BigDecimal.valueOf(followersCnt), 10, RoundingMode.HALF_UP)
-                .multiply(BigDecimal.valueOf(2 + publicReposCnt));
-    }
 }
